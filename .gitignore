@@ -3,3 +3,4 @@ __pycache__
 stock.csv
 stock.desc.txt
 test_fixture-stock_rebuild-full.xls
+PimsUtils.egg-info/

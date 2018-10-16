@@ -69,7 +69,9 @@ class PimsRebuildXls(object):
 
 
 def test_pimsRebuildXls_read_excel():
-  fn_in = "test_fixture-stock_rebuild.xls"
+  import os
+  BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+  fn_in = os.path.join(BASE_DIR, "test_fixture-stock_rebuild.xls")
   prx = PimsRebuildXls(fn_in)
   df, desc = prx.read_excel()
   # assert totals.shape[0]==34
