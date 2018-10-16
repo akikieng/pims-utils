@@ -4,7 +4,7 @@ class PimsRebuildXls(object):
 
   def to_csv(self, fn_out_df, fn_out_desc):
     df, desc = self.read_excel()
-    df.to_csv(fn_out_df, index=False)
+    df.to_csv(fn_out_df, index=True) # can save index now since it is set to family/code
     with open(fn_out_desc, 'w') as fh:
       fh.write(desc)      
 
@@ -64,6 +64,9 @@ class PimsRebuildXls(object):
 
     # assert totals same as manual calculation (compare to "totals" variable above)
     # df.groupby('family')['sub-total'].sum().head()
+
+    # set index and sort
+    df = df.set_index(['family', 'code']).sort_index(ascending=True)
 
     return df, desc
 
