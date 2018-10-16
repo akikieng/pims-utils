@@ -1,6 +1,8 @@
 # pims-utils
 
-Convert PIMS exported "stock rebuild" excel file (.xls) to pair of csv file and a description txt file
+Utility tools to read/convert files exported from PIMS
+
+- PimsRebuildXls: Convert PIMS exported "stock rebuild" excel file (.xls) to pair of csv file and a description txt file
 
 
 ## Requirements
